@@ -8,7 +8,12 @@ img {
   .glyphicon-calendar {
     color: #002776;
   }
-
+  .item-wrap{
+    grid-template-rows: 110px 550px minmax(50px, max-content) 10px !important;
+    }
+  .description-wrap{
+    grid-template-rows: 170px 90px auto;
+  }
   a {
     color: #002776;
   }
