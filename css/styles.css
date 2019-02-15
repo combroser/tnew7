@@ -11,12 +11,14 @@ img {
   /*Listing*/
 }
 
+/*
 .item-wrap{
   grid-template-rows: 110px 550px minmax(50px, max-content) 10px;
 }
 .description-wrap{
   grid-template-rows: 170px 90px auto ;
 }
+*/
 
 #tnew-v7 .glyphicon-calendar {
   color: #002776;
