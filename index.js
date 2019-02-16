@@ -57,27 +57,18 @@ $(window).on("load resize", function(){
     // iterate through each heading and calculate the number of wrapped lines:
     $('.tn-prod-list-item__property--heading a').filter(':visible').each(function(index){
         lines = calculate($(this));
-        height = $(this).height
-        
-        // console.log(index + ' ' + lines.lineCount + ' lines' + lines.lineHeight);
         // if the number of lines is more than one adjust the styling/positioning of surrounding elements:
-       /* commenting out because it doesn't work yet...
         if (lines.lineCount >= 2) { 
-            $(this).parent().parent()
-            .addClass("item-wrap")
-            $(this).parent().parent('.item-wrap').css("grid-template-rows", "110px 550px minmax(50px, max-content) 10px;")
-            $(this).parent().parent().children('.tn-prod-list-item__property--description')
-            .addClass("description-wrap")
-            $(this).parent().parent().children('.description-wrap').css("grid-template-rows", "170px 90px auto ")
+            $(this).parent().parent().css("grid-template-rows",`${lines.lineHeight * (lines.lineCount-1)}px 550px minmax(50px, max-content) 10px;`)
+            $(this).parent().parent().children('.tn-prod-list-item__property--description').css("grid-template-rows", `${lines.lineHeight * (lines.lineCount/4)}px 90px auto `)
             
-             }
+        }
+        // if the number of lines is less than two remove the grid-template-rows property added above:
         else if (lines.lineCount < 2) {
-            $(this).parent().parent()
-            .removeClass("item-wrap")
-            $(this).parent().parent().children('.tn-prod-list-item__property--description')
-            .removeClass("description-wrap")
+            $(this).parent().parent().css("grid-template-rows",'')
+            $(this).parent().parent().children('.tn-prod-list-item__property--description').css("grid-template-rows",'')
             
-        }   */
+        }  
 
     })
   });
