@@ -1066,7 +1066,7 @@ img {
     grid-column: 1 / span 3;
     -ms-grid-row: 3;
     -ms-grid-row-span: 3;
-    grid-row: 3 /span 3;
+    grid-row: 3 / span 3;
     height: 350px;
   }
   #tnew-v7 .even .tn-prod-list-item__property--description .color2 {
@@ -1165,10 +1165,12 @@ img {
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.6);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-transition: background .2s ease-in-out,border .2s ease-in-out,-webkit-box-shadow .2s ease-in-out;
-  transition: background .2s ease-in-out,border .2s ease-in-out,-webkit-box-shadow .2s ease-in-out;
-  transition: background .2s ease-in-out,box-shadow .2s ease-in-out,border .2s ease-in-out;
-  transition: background .2s ease-in-out,box-shadow .2s ease-in-out,border .2s ease-in-out,-webkit-box-shadow .2s ease-in-out;
+  -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
   z-index: 20;
   position: relative;
 }
@@ -1252,9 +1254,9 @@ img {
   display: -ms-grid;
   -ms-grid-columns: 3% 2% 95%;
       grid-template-columns: 3% 2% 95%;
-  -ms-grid-rows: 40px 520px minmax(50px, max-content);
-      grid-template-rows: 40px 520px minmax(50px, -webkit-max-content);
-      grid-template-rows: 40px 520px minmax(50px, max-content);
+  -ms-grid-rows: 40px 550px minmax(50px, max-content);
+      grid-template-rows: 40px 550px minmax(50px, -webkit-max-content);
+      grid-template-rows: 40px 550px minmax(50px, max-content);
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -1343,9 +1345,11 @@ img {
   color: white;
   width: 93%;
   height: 100%;
+  padding: 20px 0;
 }
 
-#tnew-v7 .btn-group-sm > .btn, #tnew-v7 .btn-sm {
+#tnew-v7 .btn-group-sm > .btn,
+#tnew-v7 .btn-sm {
   padding: 5px 10px;
   font-size: 14px;
   font-weight: 800;
@@ -1354,7 +1358,8 @@ img {
   background-color: white;
 }
 
-#tnew-v7 .btn-group-sm > .btn:hover, #tnew-v7 .btn-sm:hover {
+#tnew-v7 .btn-group-sm > .btn:hover,
+#tnew-v7 .btn-sm:hover {
   color: white;
   background-color: #fe840e;
 }
@@ -1367,36 +1372,79 @@ img {
 
 @media (max-width: 768px) {
   #tnew-v7 .tn-prod-season-header {
-    -ms-grid-rows: 40px 60px minmax(50px, max-content);
-        grid-template-rows: 40px 60px minmax(50px, -webkit-max-content);
-        grid-template-rows: 40px 60px minmax(50px, max-content);
-  }
-  #tnew-v7 .pdp-color2 {
-    z-index: -3;
+    -ms-grid-rows: 20px auto minmax(50px, max-content);
+        grid-template-rows: 20px auto minmax(50px, -webkit-max-content);
+        grid-template-rows: 20px auto minmax(50px, max-content);
   }
   #tnew-v7 .pdp-color1 {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    grid-row: 1 / span 3;
+    -ms-grid-row: 3;
+    grid-row: 3;
     -ms-grid-column: 2;
     -ms-grid-column-span: 3;
     grid-column: 2 / span 3;
     width: 95%;
     max-height: 100%;
+    z-index: -1;
+    margin-top: 0;
+  }
+  #tnew-v7 .pdp-color2 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    width: 60%;
+    height: 300px;
+    margin-top: 6%;
     z-index: -2;
   }
-  #tnew-v7 .tn-prod-season-header__description-container {
-    -ms-grid-column: 3;
-    grid-column: 3;
-    -ms-grid-row: 3;
-    grid-row: 3;
-    background-color: rgba(255, 255, 255, 0);
-    color: white;
-    width: 93%;
-    height: 100%;
+  #tnew-v7 .tn-prod-season-header__date-container {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+    padding-left: 20px;
+    -ms-grid-row: 1;
+    grid-row: 1;
   }
   #tnew-v7 .tn-prod-season-header__title-and-image-container {
-    display: inline-block;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+    grid-column: 3 / span 3;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    margin-top: 0;
+  }
+  #tnew-v7 .tn-prod-season-header__title {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  #tnew-v7 .tn-prod-season-header__image-wrapper {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    width: 100%;
+  }
+  #tnew-v7 .tn-prod-season-header__description-container {
+    padding: 20px 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  #tnew-v7 .tn-prod-season-header__title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #tnew-v7 .pdp-color2 {
+    margin-top: 11%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
