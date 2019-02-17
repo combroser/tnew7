@@ -8,12 +8,7 @@ img {
   .glyphicon-calendar {
     color: #002776;
   }
-  .item-wrap{
-    grid-template-rows: 110px 550px minmax(50px, max-content) 10px !important;
-    }
-  .description-wrap{
-    grid-template-rows: 170px 90px auto;
-  }
+
   a {
     color: #002776;
   }
@@ -1200,4 +1195,141 @@ img {
   &:active {
     background-color: white;
   }
+}
+
+
+
+/*PDP*/
+#tnew-v7 {
+
+
+.tn-prod-season-header {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 3% 2% 95%;
+  grid-template-rows: 40px 520px minmax(50px, max-content) ;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.pdp-color1 {
+  background-color: #6c4e79;
+  grid-row: 2 / span 3;
+  grid-column: 2 / span 3;
+  width: 95%;
+  max-height: 100%;
+  z-index: -2;
+  margin-top: 25%;
+}
+
+.pdp-color2 {
+  background-color: #fe840e;
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 4;
+  width: 40%;
+  height: 450px;
+  margin-top: 3%;
+  z-index: -1;
+}
+
+.tn-prod-season-header__date-container {
+  grid-column: 1 / span 3;
+  padding-left: 20px;
+}
+.tn-prod-season-header__title-and-image-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 10% auto;
+  grid-column: 3 / span 3;
+ grid-row: 2;
+ margin-top: 0;
+}
+
+.tn-prod-season-header__title {
+  color: #223a5e;
+ grid-column: 1;
+ grid-row: 1;
+ text-align: left;
+ font-family: "Amiri", serif;
+ font-size: 5rem;
+  
+}
+
+.tn-prod-season-header__image-wrapper {
+  grid-column: 1;
+  grid-row: 2;
+  width: 100%;
+
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+
+  }
+}
+
+.tn-prod-season-header__description-container {
+  grid-column: 3;
+  grid-row: 3;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  width: 93%;
+  height: 100%;
+
+}
+.btn-group-sm>.btn, .btn-sm {
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  border-radius: 0px;
+  background-color: white;
+  
+  &:hover {
+    color: white;
+    background-color: #fe840e;
+  }
+}
+
+@media (max-width: 1000px) {
+  .pdp-color2 {
+    height: 350px;
+  }
+}
+@media (max-width: 768px) {
+  .tn-prod-season-header {
+    grid-template-rows: 40px 60px minmax(50px, max-content) ;
+  }
+  .pdp-color2 {
+    z-index: -3;
+
+  }
+  .pdp-color1 {
+    grid-row: 1 / span 3;
+    grid-column: 2 / span 3;
+    width: 95%;
+    max-height: 100%;
+    z-index: -2;
+
+  }
+  .tn-prod-season-header__description-container {
+    grid-column: 3;
+    grid-row: 3;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    width: 93%;
+    height: 100%;
+  
+  }
+  .tn-prod-season-header__title-and-image-container {
+    display: inline-block;
+
+  }
+}
+
+
+
+
+
 }

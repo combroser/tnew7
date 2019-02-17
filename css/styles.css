@@ -11,15 +11,6 @@ img {
   /*Listing*/
 }
 
-/*
-.item-wrap{
-  grid-template-rows: 110px 550px minmax(50px, max-content) 10px;
-}
-.description-wrap{
-  grid-template-rows: 170px 90px auto ;
-}
-*/
-
 #tnew-v7 .glyphicon-calendar {
   color: #002776;
 }
@@ -1253,5 +1244,159 @@ img {
 
 .tn-event-listing-mode-tab-nav__list-item:active {
   background-color: white;
+}
+
+/*PDP*/
+#tnew-v7 .tn-prod-season-header {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: 3% 2% 95%;
+      grid-template-columns: 3% 2% 95%;
+  -ms-grid-rows: 40px 520px minmax(50px, max-content);
+      grid-template-rows: 40px 520px minmax(50px, -webkit-max-content);
+      grid-template-rows: 40px 520px minmax(50px, max-content);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#tnew-v7 .pdp-color1 {
+  background-color: #6c4e79;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / span 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / span 3;
+  width: 95%;
+  max-height: 100%;
+  z-index: -2;
+  margin-top: 25%;
+}
+
+#tnew-v7 .pdp-color2 {
+  background-color: #fe840e;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  grid-row: 2 / span 4;
+  width: 40%;
+  height: 450px;
+  margin-top: 3%;
+  z-index: -1;
+}
+
+#tnew-v7 .tn-prod-season-header__date-container {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  padding-left: 20px;
+}
+
+#tnew-v7 .tn-prod-season-header__title-and-image-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 10% auto;
+      grid-template-rows: 10% auto;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / span 3;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  margin-top: 0;
+}
+
+#tnew-v7 .tn-prod-season-header__title {
+  color: #223a5e;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  text-align: left;
+  font-family: "Amiri", serif;
+  font-size: 5rem;
+}
+
+#tnew-v7 .tn-prod-season-header__image-wrapper {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  width: 100%;
+}
+
+#tnew-v7 .tn-prod-season-header__image-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#tnew-v7 .tn-prod-season-header__description-container {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  width: 93%;
+  height: 100%;
+}
+
+#tnew-v7 .btn-group-sm > .btn, #tnew-v7 .btn-sm {
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  border-radius: 0px;
+  background-color: white;
+}
+
+#tnew-v7 .btn-group-sm > .btn:hover, #tnew-v7 .btn-sm:hover {
+  color: white;
+  background-color: #fe840e;
+}
+
+@media (max-width: 1000px) {
+  #tnew-v7 .pdp-color2 {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  #tnew-v7 .tn-prod-season-header {
+    -ms-grid-rows: 40px 60px minmax(50px, max-content);
+        grid-template-rows: 40px 60px minmax(50px, -webkit-max-content);
+        grid-template-rows: 40px 60px minmax(50px, max-content);
+  }
+  #tnew-v7 .pdp-color2 {
+    z-index: -3;
+  }
+  #tnew-v7 .pdp-color1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / span 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2 / span 3;
+    width: 95%;
+    max-height: 100%;
+    z-index: -2;
+  }
+  #tnew-v7 .tn-prod-season-header__description-container {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 3;
+    grid-row: 3;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    width: 93%;
+    height: 100%;
+  }
+  #tnew-v7 .tn-prod-season-header__title-and-image-container {
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
