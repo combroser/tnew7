@@ -1447,4 +1447,15 @@ img {
     margin-top: 11%;
   }
 }
+
+#tnew-v7 .input-group-btn:last-child > .btn {
+  color: #fff;
+  background-color: #002776;
+  border-color: #002776;
+  border-radius: 0px;
+}
+
+#tnew-v7 .input-group .form-control:first-child {
+  border-radius: 0px;
+}
 /*# sourceMappingURL=styles.css.map */

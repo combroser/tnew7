@@ -72,6 +72,12 @@ $(window).on("load resize", function(){
 
     })
   });
-
-
 })
+
+
+
+ // Move PDP logo block
+$( init );
+function init() {
+  $('.tn-event-detail__additional-events-container').append( $('.logo-block') );
+}
