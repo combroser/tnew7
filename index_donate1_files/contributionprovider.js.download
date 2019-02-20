@@ -1,0 +1,98 @@
+﻿"use strict";
+
+tnew.lib.ContibutionProvider = function (contributionTypes, validationProvider) {
+    var $public = {};
+    var $private = {};
+
+    $private.contributionTypes = contributionTypes;
+    $private.contributionType = null;
+    $private.validationProvider = validationProvider;
+
+    $private.loadContribution = function() {
+        var contributionTypeId = $('#AddContribution_ContributionTypeId').val();
+
+        if (contributionTypeId === "") {
+            return;
+        }
+
+        $private.contributionType = $private.getContribution(contributionTypeId);
+
+        if ($private.contributionType == null) {
+            return;
+        }
+
+        var form = $private.contributionType.contributionFormComponent;
+
+        if (!form.contributionTypeText) {
+            form.contributionTypeText = '';
+        }
+
+        $(".tn-contribution-type-text").html(form.contributionTypeText);
+
+        if (form.isSuggestedAmountEditable) {
+            $("#AddContribution_Amount").removeAttr('readonly');
+        } else {
+            $("#AddContribution_Amount").prop('readonly', 'true');
+        };
+
+        if (form.suggestedAmount > 0) {
+            $("#AddContribution_Amount").val(form.suggestedAmount.toFixed(2));
+        } else {
+            $("#AddContribution_Amount").val("");
+        };
+    };
+
+    $public.listen = function() {
+        $(document).on('change', '#AddContribution_ContributionTypeId', function () {
+
+            $private.validationProvider.resetFieldMessages("AddContribution.Amount");
+
+            $private.loadContribution();
+            $private.loadForms();
+        });
+
+        $private.loadContribution();
+    };
+
+    $private.loadForms = function () {
+        $(".tn-contribution-type-form-container").hide(100);
+        var form = $private.contributionType.contributionFormComponent;
+
+        var keys = form.formTemplateKeys;
+
+        if (keys &&
+            keys.constructor === Array &&
+            keys.length > 0) {
+            $(".tn-form-loader").show(100);
+            var service = new tnew.lib.ajax.Service();
+
+            var q = keys.join();
+
+            service
+                .get("api/forms/html?keys=" + q)
+                .done(function(f) {
+                    $(".tn-form-loader").hide();
+                    $(".tn-contribution-type-form-container").html(f).show(100);
+                })
+                .fail(function() {
+                    $(".tn-form-loader").hide();
+                });
+        } else {
+            $(".tn-form-loader").hide();
+        }
+    };
+
+    $private.getContribution = function(key) {
+        var i;
+
+        for (i = 0; i < $private.contributionTypes.length; i++) {
+            if ($private.contributionTypes[i].contributionProduct.id == key) {
+                return $private.contributionTypes[i];
+            }
+        }
+
+        return null;
+    };
+
+    return $public;
+};
