@@ -3,10 +3,6 @@ body {
   opacity: 1;
 }
 
-img {
-  max-width: 768px;
-}
-
 #tnew-v7 {
   /*Listing*/
 }
@@ -1446,5 +1442,36 @@ img {
   #tnew-v7 .pdp-color2 {
     margin-top: 11%;
   }
+}
+
+#tnew-v7 .input-group-btn:last-child > .btn {
+  color: #fff;
+  background-color: #002776;
+  border-color: #002776;
+  border-radius: 0px;
+}
+
+#tnew-v7 .input-group .form-control:first-child {
+  border-radius: 0px;
+}
+
+#tnew-v7 .btn-primary {
+  background-color: #002776;
+}
+
+#tnew-v7 footer {
+  clear: both;
+}
+
+#tnew-v7 .form-control {
+  border-radius: 0px;
+}
+
+#tnew-v7 .input-group-addon {
+  border-radius: 0px;
+}
+
+#tnew-v7 .btn {
+  border-radius: 0px;
 }
 /*# sourceMappingURL=styles.css.map */
