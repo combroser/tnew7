@@ -92,12 +92,12 @@
   font-size: 1.2rem;
 }
 
-#tnew-v7 donate-header {
+#tnew-v7 donate-donate-header {
   max-height: 656px;
   position: relative;
 }
 
-#tnew-v7 donate-header img {
+#tnew-v7 donate-donate-header img {
   max-width: 100%;
 }
 
@@ -136,15 +136,14 @@
   #tnew-v7 .info-box h3 {
     font-size: 1.8rem !important;
   }
-  #tnew-v7 header title-text {
+  #tnew-v7 donate-header title-text {
     position: unset;
-    top: unset;
     top: unset;
     left: unset;
   }
-  #tnew-v7 header title-text h1 {
+  #tnew-v7 donate-header title-text h1 {
     font-size: 2rem !important;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
   }
   #tnew-v7 .info-box .left {
     padding: unset;
@@ -535,7 +534,7 @@
   margin: 0px;
   text-align: left;
   color: #292929;
-  top: -65px;
+  top: -114.3px;
   font-size: 14px;
 }
 
@@ -707,7 +706,7 @@
   display: block;
 }
 
-#tnew-v7 header .grade {
+#tnew-v7 donate-header .grade {
   right: 0;
   left: 0;
   position: absolute;
@@ -726,6 +725,7 @@
 
 @media only screen and (max-width: 900px) {
   #tnew-v7 .mobile {
+    margin-top: 15px;
     display: block;
   }
   #tnew-v7 .desktop {
@@ -734,5 +734,21 @@
   #tnew-v7 .desk {
     display: none;
   }
+}
+
+#tnew-v7 .tn-heading {
+  display: none;
+}
+
+#tnew-v7 section.tn-donate-header-component h1 {
+  margin-bottom: 0;
+}
+
+#tnew-v7 .tn-page-bottom {
+  padding: 0 10px;
+}
+
+#tnew-v7 .tn-heading-sub-text {
+  padding: 0 10px;
 }
 /*# sourceMappingURL=donate_styles.css.map */

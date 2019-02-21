@@ -2709,7 +2709,7 @@ var FormatOptions = [
 //main
 
 var html5Slider = document.getElementById('html5');
-var inputNumber = document.getElementById('mainContent_txt_amount');
+var inputNumber = document.getElementById('AddContribution_Amount');
 var tooltipSlider = document.getElementById('slider-tooltip');
 
 noUiSlider.create(html5Slider, {

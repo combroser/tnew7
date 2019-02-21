@@ -39,16 +39,16 @@
     font-size:1.2rem;	
     }
     
-    donate-header {
+    donate-donate-header {
       max-height: 656px;
       position: relative;
     }
     
-    donate-header img {
+    donate-donate-header img {
       max-width: 100%;
     }
     
-    donate-header title-text {
+    donate-donate-header title-text {
     
     }
     
@@ -87,15 +87,15 @@
       .info-box h3 {
         font-size: 1.8rem !important;
       }
-      header title-text {
+
+      donate-header title-text {
         position: unset;
-        top: unset;
         top: unset;
         left: unset;
       }
-      header title-text h1 {
+      donate-header title-text h1 {
       font-size: 2rem !important;
-      padding-bottom: 15px;
+      padding-bottom: 0px;
       }
       .info-box .left {
         padding: unset;
@@ -475,7 +475,7 @@
     margin: 0px;
     text-align: left;
     color: #292929;
-    top: -65px;
+    top: -114.3px;
     font-size: 14px;
   }   
     .slide::before {
@@ -633,12 +633,13 @@
   }
   .mobile {
     display: none;
+
   }
   .desktop {
   display: block;
   }
   
-  header .grade {
+  donate-header .grade {
     right: 0;
     left: 0;
     position: absolute;
@@ -657,6 +658,7 @@
   
   @media only screen and (max-width: 900px) {
     .mobile {
+        margin-top: 15px;
         display: block;
     }
     .desktop {
@@ -666,6 +668,17 @@
       display: none;
     }
   }
-  
-  
+  .tn-heading {
+      display: none;
+  }
+  section.tn-donate-header-component h1 {
+      margin-bottom: 0;
+  }
+
+  .tn-page-bottom {
+    padding: 0 10px;
+  }
+  .tn-heading-sub-text {
+    padding: 0 10px;
+  }
 }
