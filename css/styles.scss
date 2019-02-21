@@ -1,6 +1,9 @@
 body {
   opacity: 1;
 }
+img {
+  max-width: 768px;
+}
 #tnew-v7 {
   .glyphicon-calendar {
     color: #002776;
@@ -1299,41 +1302,4 @@ body {
       margin-top: 11%;
     }
   }
-
-
-  .input-group-btn:last-child>.btn {
-    color: #fff;
-    background-color: #002776;
-    border-color: #002776;
-    border-radius: 0px;
-}
-.input-group .form-control:first-child {
-  border-radius: 0px;
-}
-
-.btn-primary {
-  background-color: #002776;
-}
-
-footer {
-  clear: both;
-}
-
-.form-control {
-  border-radius: 0px;
-}
-.input-group-addon {
-  border-radius: 0px;
-}
-.btn {
-  border-radius: 0px;
-}
-
-
-
-
-
-
-
-
 }
