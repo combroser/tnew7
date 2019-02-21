@@ -3,6 +3,21 @@ body {
   opacity: 1;
 }
 
+#tn-whitelabel-container {
+  max-width: 1400px;
+  margin: 0px auto 0 auto;
+  padding: 0 10px;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto auto;
+}
+
+.tn-events-detail-page .tn-detail {
+  max-width: 992px;
+}
+
 #tnew-v7 {
   /*Listing*/
 }

@@ -75,3 +75,13 @@ $(window).on("load resize", function(){
 
 
 })
+
+
+
+
+
+//**Moving logo block on PDP*/
+$( init );
+function init() {
+  $('.tn-event-detail__additional-events-container').append( $('.logos') );
+}
