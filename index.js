@@ -78,8 +78,21 @@ $(window).on("load resize", function(){
 
 
 
+/**Hiding content divs on pdp */
+$( "#more-info-btn" ).click(function() {
+    $( "#more-info" ).toggle( "slow", function() {
+      // Animation complete.
+    });
+  });
 
-
+  $( "more-info-btn" ).click(function() {
+    $( this ).toggleClass( ".rotate-90");
+  });
+/*hide hutton*/
+  $( "#tn-detail-production-text-content" ).removeClass( "collapse" );
+/*add and wrap*/ 
+  $( ".more-info" ).wrap( "<div id='more-info' class='collapse'></div>" );
+  $( "#more-info" ).before( "<div id='more-info-btn' class='tn-pdp-item__perf-list-item' data-toggle='collapse' data-target='#more-info' aria-expanded='false'><div class='tn-pdp-item__perf-anchor'><span class='tn-pdp-item__perf-action'>More Info</span></span><span class='glyphicon glyphicon-chevron-right btn btn-primary js-rotate-if-collapsed'></span></div></div>" );
 //**Moving logo block on PDP*/
 $( init );
 function init() {

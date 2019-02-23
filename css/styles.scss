@@ -1362,39 +1362,92 @@ footer {
 .logos {
   margin-top: 40px;
 }
-.tn-pdp-list-item__perf-list-item a {
-  color: #223a5e;
-}
-.tn-pdp-list-item__perf-list-item {
+
+.tn-pdp-item__perf-list-item {
   background-color: white;
   color:#223a5e;
-  width: 20%;
-  height: 35px;
+  width: 200px;
+  height: 40px;
   margin-bottom: 10px;
+  display: block;
+
+  &:hover {
+    .tn-pdp-item__perf-anchor {
+      cursor: pointer;
+    }
+    .glyphicon {
+    background-color: #fe840e;
+    border-color: #e6e6e6;
+    }
+    .tn-pdp-item__perf-action {
+      color: #fe840e;
+    }
+  }
    .btn {
-     float: right;
      background-color: #223a5e;
-     height: 100%
+     height: 40px;
+     vertical-align: center;
+     padding-top: 8px;
+     transition: color 1s;
+   }
+   .glyphicon {
+     top: 0;
+     color: white;
+     background-color: #223a5e;
+     min-height: 40px;
+     width: 40px;
+     border: 2px solid #3d4c63;
+     border-left: none;
+     -webkit-transition: all 0.25s ease-in-out;
+     -moz-transition: all 0.25s ease-in-out;
+     -ms-transition: all 0.25s ease-in-out;
+     -o-transition: all 0.25s ease-in-out;
+     transition: all 0.25s ease-in-out;   
    }
 }
-.tn-pdp-list-item__perf-anchor {
+[data-toggle="collapse"][aria-expanded="true"] > .glyphicon-chevron-right::before
+          {
+            -webkit-transform: rotate(180deg);
+            -moz-transform:    rotate(180deg);
+            -ms-transform:     rotate(180deg);
+            -o-transform:      rotate(180deg);
+            transform:         rotate(180deg);
+          
+        }
+
+.tn-pdp-item__perf-anchor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  color: #555;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  color: #223a5e;
   line-height: 1.3;
   min-height: 40px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  padding-right: 30px;
+  padding-right: 0px;
+
 }
-.tn-pdp-list-item__perf-action {
+.tn-pdp-item__perf-action {
+  width: 160px;
   padding-left: 10px;
+  font-weight: 600;
+  border: 2px solid #e6e6e6;
+  border-right: none;
+  height: 40px;
+  padding-top: 7px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
+.tn-detail-production-text-toggle-link {
+  display: none;
+}
+
+
 }
