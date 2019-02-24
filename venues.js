@@ -18,17 +18,29 @@ $(document).ready(function(){
         ]
     var venue = $(".tn-event-detail__location").text()
     
-    $(".tn-prod-season-header__description").after(function(){
+    $(".more-info").after(function(){
         
         let venueData = venues.find(items => items.name === venue)
         
         console.log(venueData)
         
-        venueBlock = `<div>
+        venueBlock = `<div id='venue-info-btn' class='tn-pdp-item__perf-list-item' data-toggle='collapse' data-target='#venue-info' aria-expanded='false'><div class='tn-pdp-item__perf-anchor'><span class='tn-pdp-item__perf-action'>Venue Info</span></span><span class='glyphicon glyphicon-chevron-right btn btn-primary js-rotate-if-collapsed'></span></div></div>
+                        <div id='venue-info'>
+                        
                         <p>${venueData.description}</p>
 
                         </div>`
         return venueBlock
     })
+
+    $( "#venue-info-btn" ).click(function() {
+        $( "#venue-info" ).toggle( "slow", function() {
+          // Animation complete.
+        });
+      });
+    
+      $( "venue-info-btn" ).click(function() {
+        $( this ).toggleClass( ".rotate-90");
+      });
 })
 
