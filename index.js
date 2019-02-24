@@ -85,16 +85,30 @@ $( "#more-info-btn" ).click(function() {
     });
   });
 
-  $( "more-info-btn" ).click(function() {
-    $( this ).toggleClass( ".rotate-90");
-  });
+
+
+
+
 /*hide hutton*/
   $( "#tn-detail-production-text-content" ).removeClass( "collapse" );
 /*add and wrap*/ 
   $( ".more-info" ).wrap( "<div id='more-info' class='collapse'></div>" );
   $( "#more-info" ).before( "<div id='more-info-btn' class='tn-pdp-item__perf-list-item' data-toggle='collapse' data-target='#more-info' aria-expanded='false'><div class='tn-pdp-item__perf-anchor'><span class='tn-pdp-item__perf-action'>More Info</span></span><span class='glyphicon glyphicon-chevron-right btn btn-primary js-rotate-if-collapsed'></span></div></div>" );
-//**Moving logo block on PDP*/
+  
+  $( ".video" ).wrap( "<div id='video' class='collapse'></div>" );
+  $( "#video" ).before( "<div id='more-info-btn' class='tn-pdp-item__perf-list-item' data-toggle='collapse' data-target='#video' aria-expanded='false'><div class='tn-pdp-item__perf-anchor'><span class='tn-pdp-item__perf-action'>Video</span></span><span class='glyphicon glyphicon-chevron-right btn btn-primary js-rotate-if-collapsed'></span></div></div>" );
+
+  $( ".venue" ).wrap( "<div id='venue' class='collapse'></div>" );
+  $( "#venue" ).before( "<div id='more-info-btn' class='tn-pdp-item__perf-list-item' data-toggle='collapse' data-target='#venue' aria-expanded='false'><div class='tn-pdp-item__perf-anchor'><span class='tn-pdp-item__perf-action'>Venue</span></span><span class='glyphicon glyphicon-chevron-right btn btn-primary js-rotate-if-collapsed'></span></div></div>" );
+
+  //**Moving logo block on PDP*/
 $( init );
 function init() {
   $('.tn-event-detail__additional-events-container').append( $('.logos') );
 }
+
+
+$( ".tn-pdp-item__perf-anchor" ).click(function() {
+    $( this ).find( ".glyphicon" ).toggleClass( "glyphicon-chevron-down" );
+  });
+ 

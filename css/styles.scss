@@ -1266,7 +1266,7 @@ main {
     .pdp-color2 {
       grid-row: 1;
       width: 60%;
-      height: 300px;
+      height: 100px;
       margin-top: 6%;
       z-index: -2;
     }
@@ -1382,6 +1382,12 @@ footer {
     .tn-pdp-item__perf-action {
       color: #fe840e;
     }
+  &:active {
+    .glyphicon {
+      background-color: #b4a595;
+      border-color: #e6e6e6;
+      }
+  }  
   }
    .btn {
      background-color: #223a5e;
@@ -1403,6 +1409,10 @@ footer {
      -ms-transition: all 0.25s ease-in-out;
      -o-transition: all 0.25s ease-in-out;
      transition: all 0.25s ease-in-out;   
+   }
+   .glyphicon-chevron-down {
+     background-color: #b4a595;
+     border-color: #e6e6e6;
    }
 }
 [data-toggle="collapse"][aria-expanded="true"] > .glyphicon-chevron-right::before
@@ -1449,5 +1459,30 @@ footer {
   display: none;
 }
 
+.venue {
+  margin-top: 15px;
+  h1 {
+  color: white;
+  }
+  h3 {
+    color: white;
+  }
+  img {
+    width: 100%;
+  }
+}
+  @media (max-width: 768px) {
+    .venue {
+      h1 {
+      font-size: 20px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+  }
+
+
+
+}
 
 }
