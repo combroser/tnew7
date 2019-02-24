@@ -74,10 +74,6 @@ $(window).on("load resize", function(){
   });
 
 
-})
-
-
-
 /**Hiding content divs on pdp */
 $( "#more-info-btn" ).click(function() {
     $( "#more-info" ).toggle( "slow", function() {
@@ -93,8 +89,8 @@ $( "#more-info-btn" ).click(function() {
 /*add and wrap*/ 
   $( ".more-info" ).wrap( "<div id='more-info' class='collapse'></div>" );
   $( "#more-info" ).before( "<div id='more-info-btn' class='tn-pdp-item__perf-list-item' data-toggle='collapse' data-target='#more-info' aria-expanded='false'><div class='tn-pdp-item__perf-anchor'><span class='tn-pdp-item__perf-action'>More Info</span></span><span class='glyphicon glyphicon-chevron-right btn btn-primary js-rotate-if-collapsed'></span></div></div>" );
+
 //**Moving logo block on PDP*/
-$( init );
-function init() {
   $('.tn-event-detail__additional-events-container').append( $('.logos') );
-}
+
+})
