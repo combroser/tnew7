@@ -100,6 +100,9 @@ $( "#more-info-btn" ).click(function() {
 
   $( ".venue" ).wrap( "<div id='venue' class='collapse'></div>" );
   $( "#venue" ).before( "<div id='more-info-btn' class='tn-pdp-item__perf-list-item' data-toggle='collapse' data-target='#venue' aria-expanded='false'><div class='tn-pdp-item__perf-anchor'><span class='tn-pdp-item__perf-action'>Venue</span></span><span class='glyphicon glyphicon-chevron-right btn btn-primary js-rotate-if-collapsed'></span></div></div>" );
+ 
+
+
 
   //**Moving logo block on PDP*/
 $( init );
